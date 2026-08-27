@@ -1,0 +1,6 @@
+{
+  "name": "Computer Vision Classifier Studio",
+  "description": "Interactive Python code generator, architecture visualizer, and workbench for Computer Vision image classification with PyTorch, TensorFlow, and Hugging Face.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

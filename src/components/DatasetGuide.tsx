@@ -169,6 +169,59 @@ export const DatasetGuide: React.FC = () => {
           </p>
         </div>
       </div>
+
+      {/* GitHub Repository & Python Scripts Section */}
+      <div className="bg-zinc-950 border-2 border-white p-5 shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] space-y-4">
+        <div className="flex items-center justify-between border-b-2 border-zinc-800 pb-3">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 bg-white text-black font-black flex items-center justify-center border border-white">
+              <Terminal className="w-3.5 h-3.5 stroke-[2.5]" />
+            </div>
+            <h3 className="font-display text-sm font-black text-white uppercase tracking-tight">
+              Publishing Python Code & Scripts to GitHub
+            </h3>
+          </div>
+          <span className="text-[10px] font-mono font-black uppercase bg-yellow-400 text-black px-2 py-0.5 border border-white">
+            READY IN WORKSPACE
+          </span>
+        </div>
+
+        <p className="font-mono text-xs text-zinc-300 uppercase leading-relaxed">
+          The workspace now includes pre-configured Python scripts in <code className="text-yellow-400">/scripts</code> and <code className="text-yellow-400">requirements.txt</code>:
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
+          <div className="p-3 bg-black border border-zinc-700 space-y-1">
+            <div className="text-yellow-400 font-black">scripts/train_pytorch.py</div>
+            <p className="text-zinc-400 text-[11px] uppercase">
+              PyTorch ImageFolder model trainer with Mixed Precision (AMP), Cosine Annealing, and checkpoint saves.
+            </p>
+          </div>
+          <div className="p-3 bg-black border border-zinc-700 space-y-1">
+            <div className="text-white font-black">scripts/train_tensorflow.py</div>
+            <p className="text-zinc-400 text-[11px] uppercase">
+              TensorFlow Keras pipeline utilizing EfficientNet backbone with early stopping and learning rate plateau scheduling.
+            </p>
+          </div>
+          <div className="p-3 bg-black border border-zinc-700 space-y-1">
+            <div className="text-yellow-400 font-black">scripts/inference_webcam.py</div>
+            <p className="text-zinc-400 text-[11px] uppercase">
+              Real-time video feed inference with OpenCV and PyTorch, displaying live bounding boxes and FPS telemetry.
+            </p>
+          </div>
+        </div>
+
+        <div className="p-3 bg-black border-2 border-zinc-800 font-mono text-xs space-y-2">
+          <div className="text-white font-black uppercase flex items-center gap-1.5">
+            <CheckCircle2 className="w-3.5 h-3.5 text-yellow-400 stroke-[2.5]" />
+            <span>How to push this workspace to GitHub:</span>
+          </div>
+          <ol className="list-decimal list-inside space-y-1 text-zinc-300 text-[11px] uppercase">
+            <li>In AI Studio, click the project menu / settings icon in the top header and select <span className="text-yellow-400 font-bold">Export to GitHub</span> or <span className="text-yellow-400 font-bold">Export ZIP</span>.</li>
+            <li>Alternatively, run <code className="text-white bg-zinc-900 px-1 py-0.5 border border-zinc-700">git add scripts/ requirements.txt README.md && git commit -m "Add vision scripts" && git push</code> in your local clone.</li>
+          </ol>
+        </div>
+      </div>
     </div>
   );
 };
